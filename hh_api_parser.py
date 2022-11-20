@@ -1,6 +1,7 @@
-#### base classes
 import requests
 import pandas as pd
+
+#### base classes
 class BaseRequest:
     url: str = None
     params: dict = dict()
