@@ -84,7 +84,7 @@ class EmployersRequest(BaseRequest):
     }
 class HHVacanciesParser:
     search_params = VacanciesRequest().all_params
-    last_search_fount_items = None
+    last_search_found_items = None
     last_search_kwargs = None
     def __init__(self):
         pass
@@ -92,7 +92,7 @@ class HHVacanciesParser:
         kwargs = locals()['kwargs']
         self.last_search_kwargs = kwargs
         r = VacanciesRequest().get(params = kwargs)
-        self.last_search_fount_items = r.get('found')
+        self.last_search_found_items = r.get('found')
         return r.get('items')
     def find(self, text = '', search_field = 'name', area = None, responses_count_enabled = 'true', order_by = None, 
             experience = None, employment = None, schedule = None,  specialization = None, industry = None, employer_id = None, currency = None, label = None, date_from = None, date_to = None, per_page = None, page = None):
