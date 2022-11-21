@@ -1,4 +1,6 @@
 # hh_api_parser
+## Description
+This project used official API https://github.com/hhru/api
 ## Example of code
 ```
 finder = HHVacanciesParser()
